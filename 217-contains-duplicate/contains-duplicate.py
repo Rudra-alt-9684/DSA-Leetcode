@@ -1,11 +1,6 @@
 class Solution:
-    def containsDuplicate(self, nums: list[int]) -> bool:
-        flag = True
-        nums.sort()
-        for i in range(1,len(nums)):
-            if nums[i-1] == nums[i]:
-                return flag
-        flag = False
-        return flag
-
+    def containsDuplicate(self, n: list[int]) -> bool:
+        len_n = len(n)
+        len_setn = len(set(n))
+        return len_n != len_setn
         
